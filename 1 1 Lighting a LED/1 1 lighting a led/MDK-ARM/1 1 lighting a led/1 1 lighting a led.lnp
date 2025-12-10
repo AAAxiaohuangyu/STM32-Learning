@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"1 1 lighting a led\startup_stm32f103xb.o"
+"1 1 lighting a led\main.o"
+"1 1 lighting a led\gpio.o"
+"1 1 lighting a led\stm32f1xx_it.o"
+"1 1 lighting a led\stm32f1xx_hal_msp.o"
+"1 1 lighting a led\stm32f1xx_hal_gpio_ex.o"
+"1 1 lighting a led\stm32f1xx_hal.o"
+"1 1 lighting a led\stm32f1xx_hal_rcc.o"
+"1 1 lighting a led\stm32f1xx_hal_rcc_ex.o"
+"1 1 lighting a led\stm32f1xx_hal_gpio.o"
+"1 1 lighting a led\stm32f1xx_hal_dma.o"
+"1 1 lighting a led\stm32f1xx_hal_cortex.o"
+"1 1 lighting a led\stm32f1xx_hal_pwr.o"
+"1 1 lighting a led\stm32f1xx_hal_flash.o"
+"1 1 lighting a led\stm32f1xx_hal_flash_ex.o"
+"1 1 lighting a led\stm32f1xx_hal_exti.o"
+"1 1 lighting a led\system_stm32f1xx.o"
+--strict --scatter "1 1 lighting a led\1 1 lighting a led.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "1 1 lighting a led.map" -o "1 1 lighting a led\1 1 lighting a led.axf"

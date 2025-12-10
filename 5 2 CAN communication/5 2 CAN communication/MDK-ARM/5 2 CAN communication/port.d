@@ -1,0 +1,12 @@
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+5 2 can communication\port.o: F:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+5 2 can communication\port.o: F:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+5 2 can communication\port.o: ../Core/Inc/FreeRTOSConfig.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+5 2 can communication\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
