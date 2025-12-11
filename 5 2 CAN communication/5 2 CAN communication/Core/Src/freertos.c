@@ -30,11 +30,11 @@
 #include "can_user.h"
 #include "string.h"
 #include "stdio.h"
+#include "tim.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-void CANTask(void *ptr);
 void OLEDTask(void *ptr);
 /* USER CODE END PTD */
 
@@ -51,7 +51,6 @@ void OLEDTask(void *ptr);
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 osThreadId_t OLEDTaskHandle;
-osThreadId_t CANTaskHandle;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -80,7 +79,9 @@ void MX_FREERTOS_Init(void) {
   OLED_Init();
   OLED_CLS();
   HAL_CAN_Start(&hcan);
-  CAN_Filter_Config_ListMode();
+  CAN_Filter_Config_Mode();
+  HAL_CAN_ActivateNotification(&hcan,CAN_IT_RX_FIFO0_MSG_PENDING);
+  HAL_TIM_Base_Start_IT(&htim1);
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -110,11 +111,6 @@ void MX_FREERTOS_Init(void) {
     .priority = osPriorityNormal,
   });
 
-  CANTaskHandle = osThreadNew(CANTask,NULL,&(osThreadAttr_t){
-    .name = "CAN",
-    .stack_size = 512,
-    .priority = osPriorityNormal,
-  });
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -147,26 +143,42 @@ void OLEDTask(void *ptr){
   while(1){
     static char charbuff[32]={0};
 
-    sprintf(charbuff,"TXID:0x%03X",TXID);
-    OLED_ShowString(0,0,charbuff);
     sprintf(charbuff,"RXID:0x%03X",RXID);
-    OLED_ShowString(0,2,charbuff);
+    OLED_ShowString(0,0,charbuff);
     sprintf(charbuff,"LENGTH:%d",RXLENG);
-    OLED_ShowString(0,4,charbuff);
+    OLED_ShowString(0,2,charbuff);
     sprintf(charbuff,"D:%02X %02X %02X %02X",Rx_data[0],Rx_data[1],Rx_data[2],Rx_data[3]);
-    OLED_ShowString(0,6,charbuff);
+    OLED_ShowString(0,4,charbuff);
   }
 }
 
-void CANTask(void *ptr){
-  while (1)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM4)
   {
-    CAN_Send(TXID,Tx_data,TXLENG);
-    osDelay(500);
-    CAN_Receive(&RXID,Rx_data,&RXLENG);
-    osDelay(500);
-    HAL_GPIO_TogglePin(GPIOC,test_Pin);
+    HAL_IncTick();
   }
+  /* USER CODE BEGIN Callback 1 */
+  if (htim ->Instance == TIM1){
+    static uint16_t count = 1;
+    static uint32_t ID = 0x0;
+    count++;
+    if (count >= 500){
+    HAL_GPIO_TogglePin(GPIOC,test_Pin);
+    count = 0;
+    uint8_t temp[8] = {ID & 0xFF};
+    CAN_Send(ID, temp, 1);
+    ID++;
+    }
+  }
+  /* USER CODE END Callback 1 */
+}
+
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
+  CAN_Receive(&RXID,Rx_data,&RXLENG);
 }
 /* USER CODE END Application */
 

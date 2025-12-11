@@ -29,7 +29,6 @@
 5 2 can communication\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 5 2 can communication\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 5 2 can communication\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
-5 2 can communication\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 5 2 can communication\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 5 2 can communication\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 5 2 can communication\main.o: ../Core/Inc/FreeRTOSConfig.h
@@ -42,7 +41,6 @@
 5 2 can communication\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 5 2 can communication\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 5 2 can communication\main.o: ../Core/Inc/can.h
-5 2 can communication\main.o: ../Core/Inc/dma.h
 5 2 can communication\main.o: ../Core/Inc/i2c.h
-5 2 can communication\main.o: ../Core/Inc/usart.h
+5 2 can communication\main.o: ../Core/Inc/tim.h
 5 2 can communication\main.o: ../Core/Inc/gpio.h

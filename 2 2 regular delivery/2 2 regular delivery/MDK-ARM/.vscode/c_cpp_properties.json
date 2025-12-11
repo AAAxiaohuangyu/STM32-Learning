@@ -3,16 +3,16 @@
         {
             "name": "2 2 regular delivery",
             "includePath": [
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Core\\Inc",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\CMSIS\\Include",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Core\\Inc",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\CMSIS\\Include",
                 "F:\\Keil5\\ARM\\ARMCC\\include",
                 "F:\\Keil5\\ARM\\ARMCC\\include\\rw",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\MDK-ARM",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Core\\Src",
-                "g:\\project\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\MDK-ARM",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Core\\Src",
+                "g:\\STM32-Learning\\2 2 regular delivery\\2 2 regular delivery\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

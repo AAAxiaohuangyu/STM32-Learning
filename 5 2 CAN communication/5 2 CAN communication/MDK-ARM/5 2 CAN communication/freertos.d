@@ -38,7 +38,6 @@
 5 2 can communication\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 5 2 can communication\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 5 2 can communication\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
-5 2 can communication\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 5 2 can communication\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 5 2 can communication\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 5 2 can communication\freertos.o: ../data/data.h
@@ -49,3 +48,4 @@
 5 2 can communication\freertos.o: ../Core/Inc/can.h
 5 2 can communication\freertos.o: F:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 5 2 can communication\freertos.o: F:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+5 2 can communication\freertos.o: ../Core/Inc/tim.h
